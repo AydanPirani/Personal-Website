@@ -15,6 +15,10 @@ Button {
   color: white;
 }
 
+Paper {
+  background-color: #618194;
+}
+
 .App {
   text-align: center;
 }
@@ -24,8 +28,9 @@ Button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+  margin-top: 17.5%;
   font-size: calc(10px + 2vmin);
 }
 
