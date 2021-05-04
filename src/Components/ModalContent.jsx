@@ -1,5 +1,5 @@
 import { Box } from '@material-ui/core';
-import { DiPython, DiJava, DiJavascript, DiHtml5, DiCss3, DiReact } from 'react-icons/di';
+import { DiPython, DiJava, DiCss3, DiReact } from 'react-icons/di';
 import { AiFillGithub, AiFillHtml5} from 'react-icons/ai';
 import { FaNodeJs } from "react-icons/fa"
 import { SiAutodesk, SiFirebase, SiFlask, SiJavascript } from "react-icons/si"
