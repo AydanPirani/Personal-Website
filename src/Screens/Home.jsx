@@ -1,8 +1,10 @@
 import '../index.css';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import Navbar from "../Components/Navbar.jsx"
 import Carousel from 'react-material-ui-carousel'
 import { Button, Box, Grid, Paper } from '@material-ui/core';
+import { Backdrop, Modal, Fade } from '@material-ui/core';
 
 function App() {
   var items = [
@@ -36,6 +38,16 @@ function App() {
     }
   ];
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+      setOpen(true);
+  };
+
+  const handleClose = () => {
+      setOpen(false);
+  };
+
   return (
     <div className="App">
       <Helmet>
@@ -43,6 +55,26 @@ function App() {
       </Helmet>
       
       <Navbar />
+
+      <Modal 
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{ timeout: 500}}
+        style={{display: "flex", alignItems: "center", justifyContent: "center", color: "#618194"}}>
+        <Fade in={open}>
+          <div style = {{border: "2px solid #000", padding: "10px", background: "#e6edecCC", }}>
+              <h2 style={{margins: "auto"}}>Skills</h2>
+              <text> Backend: </text> <br />
+              <text> Frontend: </text> <br />
+              <text> Technologies: </text>
+            </div>
+        </Fade>
+      </Modal>
+
       <Grid container spacing={1}>
         <Grid item xs={6} spacing={3}>
           <Box style= {{maxWidth: "max-content", marginRight: "5%", marginLeft: "5%"}}> 
@@ -50,7 +82,7 @@ function App() {
               <p className="name">AYDAN&nbsp;PIRANI</p>        
               <p className="quote"> Building&nbsp;software,&nbsp;one&nbsp;step&nbsp;at&nbsp;a&nbsp;time.</p>
               <Box style={{marginTop: "25px"}}>
-              <Button color="inherit" style={{background: "#839EAD", marginRight: "25px"}} href="/docs">SKILLS</Button>
+              <Button color="inherit" style={{background: "#839EAD", marginRight: "25px"}} onClick={handleOpen}>SKILLS</Button>
                 <Button color="inherit" style={{background: "#839EAD", marginLeft: "25px", marginRight: "25px"}} href="/docs">RESUME</Button>
                 <Button color="inherit" style={{background: "#839EAD", marginLeft: "25px"}} href="/about">LEARN MORE</Button>
               </Box>
