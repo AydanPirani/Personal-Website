@@ -1,10 +1,11 @@
 import '../index.css';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Navbar from "../Components/Navbar.jsx"
+import Navbar from "../Components/Navbar"
 import Carousel from 'react-material-ui-carousel'
 import { Button, Box, Grid, Paper } from '@material-ui/core';
 import { Backdrop, Modal, Fade } from '@material-ui/core';
+import ModalContent from '../Components/ModalContent';
 
 function App() {
   var items = [
@@ -66,12 +67,7 @@ function App() {
         BackdropProps={{ timeout: 500}}
         style={{display: "flex", alignItems: "center", justifyContent: "center", color: "#618194"}}>
         <Fade in={open}>
-          <div style = {{border: "2px solid #000", padding: "10px", background: "#e6edecCC", }}>
-              <h2 style={{margins: "auto"}}>Skills</h2>
-              <text> Backend: </text> <br />
-              <text> Frontend: </text> <br />
-              <text> Technologies: </text>
-            </div>
+          <ModalContent />
         </Fade>
       </Modal>
 
