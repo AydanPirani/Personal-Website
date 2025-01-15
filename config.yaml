@@ -1,0 +1,371 @@
+baseURL: "aydanpirani.github.io"
+languageCode: "en-us"
+title: "Aydan Pirani"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+    
+Paginate: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus:
+  # main:
+    # - identifier: blog
+    #   name: Blog
+    #   title: Blog posts
+    #   url: /blogs
+    #   weight: 1
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Aydan Pirani"
+  description: Personal Website for Aydan Pirani.
+  staticPath: ""  # The path to serve the static files from
+  favicon: "/images/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "dark"
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  color:
+    # textColor:
+    # secondaryTextColor: \#1d3557
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+    primaryColor: \#457b9d
+  #   secondaryColor:
+
+    darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+      backgroundColor: \#1d3557
+      # secondaryBackgroundColor: \#0b1d36
+      primaryColor: \#d5bdaf
+      secondaryColor: \#0b1d36
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    brandName: "Aydan Pirani" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Aydan!"
+    subtitle: "I build scalable systems for the future."
+
+    content: 
+      "As a computer science student at the University of Illinois at Urbana-Champaign, I'm deeply passionate about distributed systems and 
+      cloud computing. Through my internships, research experiences, and projects, I've learned a lot about systems at all levels - I'm 
+      excited to continue exploring this field in the future!"
+    image: /images/hero-pfp.png
+    button:
+      enable: true
+      name: "Resume"
+      url: "/AydanPirani_Resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fa fa-envelope
+          url: mailto:aydanpirani@gmail.com
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/aydanpirani
+        - icon: fab fa-github
+          url: https://github.com/aydanpirani
+        - icon: fa fa-flask
+          url: https://scholar.google.com/citations?user=J8Cb2zIAAAAJ&hl=en
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/about-pfp.png"
+    content: |-      
+      My academic concentration in systems, networking, and security has allowed me to cultivate a strong foundation in these areas. Through 
+      my coursework and research, I've achieved proficiency in distributed systems, parallel programming, and systems programming. Outside the classroom,
+      my internship with [Microsoft Cloud Security](https://azure.microsoft.com/en-us/products/category/security/) has provided me valuable, hands-on
+      experience in building real-world systems.
+
+      Furthermore, as a lead CA for [Software Design Lab](https://courses.grainger.illinois.edu/CS222/fa2022/) at UIUC, I facilitate 
+      communications between students and course staff, head the redesign of lecture content, and mitigate other logistical bottlenecks. 
+      Stay tuned for future updates!
+
+    skills:
+      enable: true
+      title: "Here are a few languages and technologies I am currently working with:"
+      items:
+        - "C/C++"
+        - "Python"
+        - "SQL"
+        - "Tensorflow/PyTorch"
+        - "CUDA"
+        - "C#"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Software Engineering Intern"
+        company: "Microsoft Azure Networking"
+        companyUrl: "https://azure.microsoft.com/en-us/products/category/networking"
+        date: "May 2023 - August 2023"
+        content: | 
+          I also interned with the Azure Physical Networks Team, under Microsoft Azure Core.
+            - Redesigned internal device acceptance service (running on 25 clusters and serving 1500+ network devices) by implementing Blob cache and converting service from stateless to stateful, reducing supplemental APIs workload by 91%.
+            - Developed internal-facing Blob Storage handler, resulting in improved file processing and enhanced developer experience.
+            - Wrote automated unit tests to achieve 100% coverage, enabling detection (and fixes) of repressed bugs within codebase.
+        info:
+          enable: false
+
+      - job: "Software Engineering Intern"
+        company: "Microsoft Cloud Security"
+        companyUrl: "https://www.microsoft.com/en-us/"
+        date: "May 2022 - August 2022"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: false
+        content: |
+          I interned with the Azure Anti-Fraud Team, under [Microsoft Cloud Security](https://azure.microsoft.com/en-us/products/category/security/) in Redmond, WA.
+          - Improved fraud detector performance by ~5% by building and deploying an end-to-end Azure Data Factory pipeline.
+          - Implemented data ingestation scripts in U-SQL to periodically generate features for machine learning models.
+          - Enhanced functionality of internal fraud detection tools to display more comprehensive fraud metrics, providing stronger fraud evidences.
+
+  # Experience
+  research:
+    enable: true
+    title: "Research"
+    items:
+      - job: "Research Assistant"
+        company: "Distributed Protocols Research Group"
+        companyUrl: "https://dprg.cs.uiuc.edu/"
+        date: "August 2022 - April 2023"
+        featuredLink:
+          enable: false
+        info:
+          enable: false
+        content: |
+          I am currently working as a research assistant with the Distributed Protocols Research Group, at UIUC.
+            - Designed fault-tolerant distributed ML training platforms for model and data parallelism across GPUs, minimizing training time for transformer-like deep learning models.
+            - Enhanced functionality of internal memory allocators to analyze advantages of custom-placed operators (step time and memory), as opposed to Tensorflow's native placement.
+            - Conducted computational experiments to evaluate Tensorflow memory allocation at varying transformer model sizes.
+
+      - job: "Research"
+        company: "Digital Humanities Project"
+        companyUrl: "https://cs.illinois.edu/about/people/faculty/angrave"
+        date: "May 2021 - June 2022"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          name: Our Poster!
+          url: "https://drive.google.com/file/d/1SU4P9Eib0vdOzS9GHAugS18wp06NNnMF/view?usp=share_link"
+        content: |
+          Working alongside two other undergraduate students, I developed a program to effectively analyze images and determine the skin color of 
+          lead actors - this would be used to perform social critiques of film.
+          - Developed scripts to detect faces within moving and still images through computer vision algorithms in Google MediaPipe and OpenCV2.
+          - Implemented non-negative matrix factorization and principal component analysis to extract skin colors from facial patches, which were used to calculate average skin color.
+          - Wrote multithreaded Python webscrapers to generate testing/training datasets by batch-downloading sets of 1000+ images.
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Science in Computer Science (Systems, Networking, and Security)"
+        school:
+          name: "Unviersity of Illinois at Urbana-Champaign"
+          url: "https://cs.illinois.edu/"
+        date: "2021 - 2024 (est)"
+        GPA: "3.9 out of 4.0"
+        content: |-
+          I presented the following poster at the Undergraduate Research Symposium:
+          - [An Algorithm to Measure Skin Tones with Applications to Bias in the Film Industry](https://drive.google.com/file/d/1SU4P9Eib0vdOzS9GHAugS18wp06NNnMF/view?usp=sharing)
+
+          **Coursework:**
+            - Distributed Systems, Operating Systems, Computer Security, Cloud Storage Systems, Communication Networks, Database Systems, Parallel Programming, System Programming, Computer Architecture
+            - Deep Learning, Artificial Intelligence, Probability and Statistics
+            - Algorithms and Models of Computation, String Algorithms, Data Structures and Algorithms
+            - Linear Algebra with Computational Applications, Numerical Methods, Calculus III
+            - Programming Languages and Compilers
+        featuredLink:
+          enable: false
+          name: "My academic record"
+          url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Distributed Inference Platform
+        content: A simple distributed inference platform, similar to Ray.
+        image: /images/projects/dist-inference.png
+        badges:
+          - "Python"
+          - "Tensorflow"
+          - "Distributed Systems"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/AydanPirani/Distributed-ML-Inference
+
+      - title: Distributed File System
+        content: A simple distributed file system, similar to Hadoop's Distributed File System.
+        image: /images/projects/dist-file-sys.png
+        badges:
+          - "Python"
+          - "Distributed Systems"
+          - "Operating Systems"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/AydanPirani/Distributed-File-System
+
+      - title: Hosted Trie
+        content: A full-stack trie application, (previously) hosted online and allowing users to modify the trie globally, while preserving atomicity.
+        image: /images/projects/hosted-trie.png
+        badges:
+          - "Python"
+          - "Javascript"
+          - "Full-Stack"
+          - "Flask"
+          - "Node.JS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/AydanPirani/Hosted-Trie
+
+      - title: Named Entity Recognition
+        content: Source code for basic NER project - scrape Google and return types of entities found.
+        image: /images/projects/ner.png
+        badges:
+          - "Python"
+          - "Natural Language Processing"
+          - "Web Scraping"
+          - "Data Cleansing"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/AydanPirani/Named-Entity-Recognition
+
+      - title: Assignment Aggregator App
+        content: A CLI-based tool, designed to assist UIUC students with managing deadlines across websites.
+        image: /images/projects/assignment-aggregator-app.png
+        badges:
+          - "Python"
+          - "Selenium"
+          - "Webscraping"
+          - "Data Cleansing"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/AydanPirani/Assignment-Aggregator-App
+
+      - title: OpenInder
+        content: Combining Open Source and Tinder together to match people and open source projects.
+        image: /images/projects/openinder.png
+        badges:
+          - "Python"
+          - "Javascript"
+          - "React"
+          - "Full-Stack"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/HackathonRepos/OpenInder
+        featured:
+          name: "Demo"
+          link: "https://openinder.netlify.app/"
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question, recruiting opportunity, or just want to say hi, I'll try my best to get back to you ASAP!
+    email: aydanpirani@gmail.com
+    btnName: Contact Me!
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
